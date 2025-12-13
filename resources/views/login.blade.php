@@ -6,7 +6,7 @@
     <title>Login</title>
 </head>
 <body>
-    <form action="/proses" method="post">
+    <form action="/login" method="post">
         @csrf
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
@@ -16,5 +16,10 @@
         <br>
         <button type="submit">Login</button>
     </form>
+    @error('email')
+        <div style="color: red;">
+            {{ $message }}
+        </div>
+    @enderror
 </body>
 </html>

@@ -8,11 +8,18 @@
 <body>
     selamat datang di dashboard! silakan kunjungi halaman
     <br>
-     role anda adalah {{ auth()->user()->role }}
+     role anda adalah {{ $user->role_name }}
     <br>
+    <br>
+    @if(session('error'))
+        <div style="color: red;">
+            {{ session('error') }}
+        </div>
+    @endif
     <br>
     <a href="/users">Data Users</a>
     <a href="/artikel">halaman artikel</a>
+    
     <!-- tombol logout dengan request method post -->
     <form action="{{ route('logout') }}" method="POST" style="display:inline;">
         @csrf

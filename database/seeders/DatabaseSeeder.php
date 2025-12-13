@@ -26,9 +26,9 @@ class DatabaseSeeder extends Seeder
 
         // run this seeders only {
 
-        // $this->call(ArtikelSeeder::class);
-        // $this->call(RoleSeeder::class);
-        // $this->call(UserSeeder::class);
+        $this->call(ArtikelSeeder::class);
+        $this->call(RoleSeeder::class);
+        $this->call(UserSeeder::class);
 
         // }
 

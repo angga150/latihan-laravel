@@ -17,7 +17,7 @@ class VerifyIsAdmin
     public function handle(Request $request, Closure $next): Response
     {
         $role_id = $request->user()->role_id;
-        $adminId = Role::where('role_name', 'Admin')->first()->id;
+        $adminId = Role::where('role_name', 'admin')->first()->id;
         if ($role_id !== $adminId) {
             return redirect('/dashboard')->with('error', 'You do not have admin access.');
         }
