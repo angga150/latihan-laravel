@@ -28,8 +28,10 @@
         @method('DELETE')
         <h2>{{ $row->title }}</h2>
         <p>{{ $row->content }}</p>
+        @can('update', $row)
         <a href="{{ route('artikel.edit', $row->id) }}" style="margin-right: 10px; text-decoration: underline; color: blue;">edit</a>
         <button type="submit">Hapus</button>
+        @endcan
     </form>
     @endforeach
 <br>

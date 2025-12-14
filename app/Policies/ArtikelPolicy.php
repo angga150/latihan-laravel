@@ -37,7 +37,7 @@ class ArtikelPolicy
      */
     public function update(User $user, Artikel $artikel): bool
     {
-        return false;
+        return $user->role->role_name === 'admin';
     }
 
     /**

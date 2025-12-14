@@ -17,7 +17,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 
 Route::resource('artikel', ArtikelController::class)->middleware('auth');
 
-Route::middleware('isAdmin')->group(function () {
-    Route::resource('users', UserController::class)->middleware('auth');
+Route::middleware(['auth', 'isAdmin'])->group(function () {
+    Route::resource('users', UserController::class);
     Route::post('/users/updateRole', [UserController::class, 'updateRole'])->name('users.updateRole');
 });

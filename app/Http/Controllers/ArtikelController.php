@@ -33,6 +33,7 @@ class ArtikelController extends Controller
 
     public function edit(Artikel $artikel)
     {
+        $this->authorize('update', $artikel);
         return view('artikel.edit', compact('artikel'));
     }
 
