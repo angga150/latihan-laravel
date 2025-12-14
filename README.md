@@ -8,3 +8,4 @@ Laravel is a fun
 - role admin dan user
 - crud artikel
 - data user hanya bisa di akses oleh admin
+- authorization untuk artikel edit dan hapus hanya bisa di akses oleh role admin
