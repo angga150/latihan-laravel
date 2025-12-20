@@ -17,7 +17,7 @@
         </div>
     @endif
     <br>
-    <a href="/users">Data Users</a>
+    <a href="/api/users">Data Users</a>
     <a href="/artikel">halaman artikel</a>
     
     <!-- tombol logout dengan request method post -->

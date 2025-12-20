@@ -16,10 +16,5 @@
         <br>
         <button type="submit">Login</button>
     </form>
-    @error('email')
-        <div style="color: red;">
-            {{ $message }}
-        </div>
-    @enderror
 </body>
 </html>

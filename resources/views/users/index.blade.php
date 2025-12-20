@@ -7,6 +7,7 @@
 </head>
 <body>
     <a href="/dashboard">back to dashboard</a>
+    <a href="/auth/register">tambah user</a>
     <table border="1">
         <thead>
             <tr>
